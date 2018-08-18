@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel = "stylesheet" type = "text/css" href = "canvas.css">
+    
+
+    <title>AS_01_WebCanvas</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Painter</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                      <!--
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">File <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Edit</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                -->
+                    <li class="nav-item">
+                            
+                            <label class="nav-link" style="margin:0;">
+                                    <input type="file" id="filePicker" accept="image/*"/ >
+                                    Upload File
+                            </label> 
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="downloadLnk" download="YourFileName.png">Download as image</a>
+                    </li>
+
+                    <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="toolDrop">
+                                    <i class="fas fa-sliders-h"></i>
+                            </button>
+                            <div class="dropdown-menu" id= "attributeDropdown">
+                                <form class="px-3 py-4">
+                                        <div id="fontGroup">
+                                        <div class="arow">
+                                                <label for="exampleFormControlSelect1">Font</label>
+                                                <div class="btn-group txtbtngrp" role="group" aria-label="Basic example">
+                                               
+                                                        <button type="button" class="btn btn-dark tb2" style="background-image: url('img/bold.png');" id="bold"></button>
+                                                        <button type="button" class="btn btn-dark tb2" style="background-image: url('img/italic.png');" id="italic"></button>
+                                                        
+                                                </div>
+                                        </div>
+                                        <div class="arow">
+                                                <select class="form-control" id="fontName">
+                                                  <option value="sans-serif">sans-serif</option>
+                                                  <option value="Courier New">Courier New</option>
+                                                  <option value="Times New Roman">Times New Roman</option>
+                                                  <option value="Verdana">Verdana</option>
+                                                  <option value="Arial">Arial</option>
+                                                </select>
+                                        </div>
+                                        <hr>
+                                        </div>
+                                        
+                                        <div id="checkGroup">
+                                        <label class="checkClass" >
+                                                <input type="checkbox" id="fillCheck" checked>
+                                                <label>Fill</label>
+                                        </label>  
+                                        <label class="checkClass cr" >
+                                                <input type="checkbox" id="borderCheck" checked>
+                                                <label>Border</label>
+                                        </label>    
+                                        <hr>         
+                                        </div>         
+
+                                   <!--     <label>Fill</label>
+                                        <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sslider round"></span>
+                                        </label>
+                                        <label>Border</label>
+                                        <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sslider round"></span>
+                                        </label>
+                                        <hr>
+                                    -->
+                                    
+                                        
+                                        <div class="arow" id="c">
+                                            
+                                        <label>Color</label>
+                                        <input type="color" class="color" id="colorPicker"><br>
+                                        </div>
+                                    
+                                        
+                                        <div id="s">
+                                        <label>Size</label>
+                                        <input class="slideValue" id="sizeValue" value="10" > <br>
+                                        <div class="slidecontainer">
+                                            <input type="range" min="1" max="500" value="10" class="slider" id="sizeSlider">
+                                        </div>
+                                    </div>
+                                        <hr>
+                                        
+                                        <div id="borderGroup">
+                                        <div class="arow">
+                                                <label>Border Color</label>
+                                                <input type="color" class="color"  id="colorPickerBorder"><br>
+                                                
+                                        </div>
+
+                                        <label>Border Width</label>
+                                        <input class="slideValue" id="borderValue" value="2" > <br>
+                                        <div class="slidecontainer">
+                                            <input type="range" min="1" max="100" value="2" class="slider" id="borderSlider">
+                                        </div>
+                                        <hr>
+                                        </div>
+
+
+                                        <label>Opacity</label>
+                                        <input class="slideValue" id="opacValue" value="100"> <br>
+                                        <div class="slidecontainer">
+                                        <input type="range" min="0" max="100" value="100" class="slider" id="opacSlider">
+                                        </div>
+                        
+                                    <button type="button" class="btn btn-dark" id="attributeDone">
+                                        Done
+                                    </button>
+                                    <button type="button" class="btn btn-dark" id="attributeReset">
+                                        Reset
+                                    </button>
+                                </form>
+                            </div>
+                </div>
+
+                  </ul>
+
+                  <form class="form-inline my-2 my-lg-0">
+                        
+                  </form>
+                </div>
+
+                
+
+
+
+              </nav>
+
+
+
+    
+    
+
+        
+
+    
+    
+
+        
+    <div class="toolButtons">
+        <div class="btn-group-vertical" id="toolBar">
+    
+         
+            <button type="button" class="btn btn-secondary penTool tb" style="background-image: url('img/brush.png');" id="brush">
+                
+            </button>
+            <!--
+            <button type="button" class="btn btn-secondary imgTool tb" id="marker">
+                    <i class="fas fa-paint-brush" class="imgTool" id="marker"></i>
+            </button>
+        -->
+            <button type="button" class="btn btn-secondary shapeTool tb"  style="background-image: url('img/slash.png');" id="line">
+                    
+            </button>
+            <button type="button" class="btn btn-secondary shapeTool tb" style="background-image: url('img/square.png');" id="rectangle">
+                    
+            </button>
+            <button type="button" class="btn btn-secondary shapeTool tb" style="background-image: url('img/circle.png');" id="circle">
+                    
+            </button>
+            <button type="button" class="btn btn-secondary shapeTool tb" style="background-image: url('img/triangle.png');" id="triangle">
+                    
+                    
+            </button>
+            <button type="button" class="btn btn-secondary eraserTool eraser tb" style="background-image: url('img/eraser.png');" id="eraser">
+               
+            </button>
+            <button type="button" class="btn btn-secondary tb" style="background-image: url('img/text.png');" id="text">
+                
+            </button>
+            
+            
+    
+            <button type="button" class="btn btn-secondary doTool tb" style="background-image: url('img/undo.png');" id="undo">
+                    
+            </button>
+            <button type="button" class="btn btn-secondary doTool tb" style="background-image: url('img/redo.png');" id="redo">
+                    
+            </button>
+            <button type="button" class="btn btn-secondary doTool tb" style="background-image: url('img/trash.png');" id="trash">
+                   
+            </button>
+        </div>
+    </div>
+
+    <div class="canvasClass"><canvas id="drawCavas"></canvas></div>
+
+    </div>
+
+    <script type="text/javascript" src="canvas.js"></script>
+    
+</body>
+</html>

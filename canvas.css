@@ -1,0 +1,145 @@
+canvas{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; 
+    position: absolute;
+    box-shadow: rgba(51, 51, 102, 0.3) 2px 2px 12px;
+}
+
+body{
+    overflow: hidden;
+}
+
+#attributeDropdown{
+    box-shadow: rgba(51, 51, 102, 0.3) 2px 2px 12px;
+}
+
+#toolBar{
+    /*position: relative;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    margin:auto;*/
+    
+}
+.canvasClass{
+    position: relative;
+    float: left;
+    overflow: scroll;
+    width: calc(100vw - 50px);
+    height: calc(100vh - 56px);
+    text-align: center;
+}
+#attributeDropdown{
+    width: 200px;
+}
+.color{
+    
+    width: 50px;
+    height: 30px;
+    background-color: white;
+    border-color: lightgray;
+    border-radius: 5px;
+    float: right;
+    clear: both;
+    
+}
+
+
+.cr{
+    float: right;
+}
+
+.checkClass{
+    
+    border-radius: 3px;
+    border-color: lightgray;
+    border-width: 1px;
+   
+    padding-left:5px;
+    padding-right:5px;
+}
+.arow{
+    margin-bottom: 3px;
+    height:30px;
+}
+
+.slideValue{
+    margin-left:10%;
+    border-radius: 5px;
+    width: 50px;
+    float: right;
+    clear: both;
+}
+.slidecontainer{
+    text-align: center;
+    
+}
+
+input[type="file"] {
+    display: none;
+    
+}
+
+.btn-secondary {
+    
+    
+    background-size: 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.dropright{
+    float: left;
+}
+
+.toolButtons {
+    float: left;
+    width: 50px;
+    height: calc(100vh - 56px);
+    padding-top: calc((100vh - 456px)/2);
+    overflow: auto;
+    
+    
+    
+
+}
+
+.tb {
+    height: 40px;
+    width: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.tb2{
+    height: 30px;
+    width: 40px;
+    background-size: 15px 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.btn-group-vertical{
+    width: 50px;
+}
+.txtbtngrp{
+    width: 80px;
+    text-align: center;
+    float: right;
+}
+
+#fontName {
+    margin-top: 3px;
+}
+
+
+label {
+    margin-bottom: 0px;
+}
+
+#attributeReset {
+    float: right;
+}
