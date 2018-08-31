@@ -1,9 +1,5 @@
 # Web Canvas
-<video width="320" height="240" controls>
-  <source src="demo/Web-CanvasDemo.mp4" type="video/mp4">
-  
-
-</video>
+![](demo/Web-CanvasDemo.mp4)
 ## Demo Link
 https://koola025.github.io/Web-Canvas/
 ## Functions
