@@ -1,5 +1,9 @@
 # Web Canvas
-![alt](demo/Web-Canvas\ Demo.mp4)
+<video width="320" height="240" controls>
+  <source src="demo/Wev-Canvas Demo.mp4" type="video/mp4">
+  
+Your browser does not support the video tag.
+</video>
 ## Demo Link
 https://koola025.github.io/Web-Canvas/
 ## Functions
