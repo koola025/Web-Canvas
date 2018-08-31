@@ -1,5 +1,5 @@
 # Web Canvas
-![](demo/Web-CanvasDemo.mp4)
+![video](demo/Web-CanvasDemo.mp4)
 ## Demo Link
 https://koola025.github.io/Web-Canvas/
 ## Functions
