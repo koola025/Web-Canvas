@@ -1,6 +1,6 @@
 # Web Canvas
 <video width="320" height="240" controls>
-  <source src="demo/Wev-Canvas Demo.mp4" type="video/mp4">
+  <source src="demo/Web-CanvasDemo.mp4" type="video/mp4">
   
 Your browser does not support the video tag.
 </video>
